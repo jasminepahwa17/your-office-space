@@ -7,9 +7,9 @@ const AboutUs = () => {
     <div className="lg:w-2/3 order-1 lg:order-0 flex flex-col gap-5">
       <p className="font-bold text-2xl">About Us</p>
       <p className="text-start">
-        Welcome to Globe Enterprise, your trusted partner in finding the ideal
+        Welcome to Your office space, your trusted partner in finding the ideal
         workspace solutions!
-        At Globe Enterprise, we specialize in providing businesses with access
+        At Your office space, we specialize in providing businesses with access
         to co-working spaces and managed office rentals that align perfectly
         with their operational needs and aspirations. As a premier brokerage
         company, we connect organizations of all sizes with flexible and fully
@@ -19,7 +19,7 @@ const AboutUs = () => {
         <br />
       </p>
       <p className="text-start">
-        <span className="font-bold text-lg">Why Choose Globe Enterprise?</span>
+        <span className="font-bold text-lg">Why Choose Your office space?</span>
         <br /> <br/>
         <ul className="list-disc list-inside">
           <li>
@@ -44,14 +44,14 @@ const AboutUs = () => {
           </li>
         </ul>
         <br/>
-        At Globe Enterprise, our mission is to redefine the way businesses
+        At Your office space, our mission is to redefine the way businesses
         discover and secure their perfect workspace. We bridge the gap between
         workspace providers and ambitious enterprises, fostering connections
         that drive success and innovation.
       </p>
       <br/>
       <p className="italic">
-      Let Globe Enterprise help you find the space where your business can grow,
+      Let Your office space help you find the space where your business can grow,
       collaborate, and succeed. <br/> <span className="font-bold">Your Space. Your Vision. Our Expertise.</span>
       </p>
     </div>
