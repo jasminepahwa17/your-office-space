@@ -3,7 +3,7 @@ import image from "../assets/p6.jpeg"
 
 const AboutUs = () => {
   return (
-    <div className="h-full min-h-screen gap-6 px-6 md:px-20 flex flex-col lg:flex-row items-center lg:items-start w-full lg:px-40">
+    <div className="h-full min-h-screen gap-6 px-6 md:px-20 flex flex-col lg:flex-row items-center lg:items-start w-full  mb-12  lg:px-40">
     <div className="lg:w-2/3 order-1 lg:order-0 flex flex-col gap-5">
       <p className="font-bold text-2xl">About Us</p>
       <p className="text-start">

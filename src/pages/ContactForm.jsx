@@ -1,6 +1,7 @@
 import React, { useState, useRef } from "react";
 import emailjs from "@emailjs/browser"
 import Loader from "../components/Loader";
+import image from "../assets/p3.jpeg"
 
 const ContactForm = () => {
   const [value, setValue] = useState("");
@@ -99,7 +100,8 @@ const ContactForm = () => {
   };
 
   return (
-    <div className="gap-4 mb-12 bg-white shadow-lg rounded-xl w-full h-fit lg:w-[40%] md:w-1/2 p-4 lg:p-8 flex flex-col ">
+    <div className="flex flex-col lg:flex-row gap-12 justify-center w-full mb-12 px-4 lg:px-40">
+    <div className="order-1 lg:order-0  gap-4 w-full h-fit lg:w-1/2  md:w-1/2  flex flex-col ">
       <p className="lg:text-2xl text-lg">Got questions? We've got answers.</p>
       <form onSubmit={handleSubmit} ref={formRef} className="flex flex-col gap-6">
         <input
@@ -223,6 +225,10 @@ const ContactForm = () => {
 
         <button type="submit" className="p-4 text-white bg-black rounded-lg flex justify-center items-center">{loading ? <Loader/> : "Submit"}</button>
       </form>
+    </div>
+    <div className="order-0 lg:order-1 lg:w-1/2 w-full lg:pt-12">
+      <img src={image} className="" />
+    </div>
     </div>
   );
 };

@@ -13,7 +13,7 @@ import p2 from "../assets/p2.jpeg";
 const Gallery = () => {
   const imgs = [p2, p3, p4, p7, p8, p10, p6];
   return (
-    <div className="flex flex-col items-center gap-12 lg:gap-24 px-6 md:px-20 lg:px-40">
+    <div className="flex flex-col items-center gap-12 lg:gap-24 px-6 md:px-20 lg:px-40  mb-12 ">
       <p className="lg:w-2/3 leading-3">
         <span className="text-lg lg:text-3xl font-semibold lg:font-bold">Welcome to Your Office Space</span>
         <br />
