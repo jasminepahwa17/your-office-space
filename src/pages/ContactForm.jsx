@@ -1,9 +1,11 @@
 import React, { useState, useRef } from "react";
 import emailjs from "@emailjs/browser"
+import Loader from "../components/Loader";
 
 const ContactForm = () => {
   const [value, setValue] = useState("");
   const formRef = useRef();
+  const [loading, setLoading] = useState(false)
   const [form, setForm] = useState({
     fname: "",
     lname: "",
@@ -12,7 +14,8 @@ const ContactForm = () => {
     number: "",
     wtype: "",
     dcount: value,
-    location: ""
+    location: "",
+    message: ""
   });
   
 
@@ -46,18 +49,17 @@ const ContactForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // setLoading(true);
+    setLoading(true);
 
     emailjs
       .send(
-        'service_9losf8h',
+        'service_ylp8xfq',
         'template_e77h24p',
         {
           from_name: form.fname,
-          to_name: "Jasmine",
+          to_name: "Your Office",
           from_email: form.cemail,
-          to_email: "jasminepahwa4567@gmail.com",
-          // yourofficespaces@gmail.com
+          to_email: "yourofficespaces@gmail.com",
           "First Name" : form.fname,
           "Last Name" : form.lname,
           "Company Name" : form.cname,
@@ -65,23 +67,30 @@ const ContactForm = () => {
           "Phone Number" : form.number,
           "Workplace type":form.wtype,
           "Desk Count":form.dcount,
-          "Location":form.location
+          "Location":form.location,
+          "Message" : form.message
         },
         'MqNW_6Dk2om_rWQV0'
       )
       .then(
         () => {
-          // setLoading(false);
-          alert("Thank you. I will get back to you as soon as possible.");
+          setLoading(false);
+          alert("Thank you. We will get back to you as soon as possible.");
 
-          // setForm({
-          //   name: "",
-          //   email: "",
-          //   message: "",
-          // });
+          setForm({
+            fname: "",
+            lname: "",
+            cname: "",
+            cemail: "",
+            number: "",
+            wtype: "",
+            dcount: "",
+            location: "",
+            message: ""
+          });
         },
         (error) => {
-          // setLoading(false);
+          setLoading(false);
           console.error(error);
 
           alert("Ahh, something went wrong. Please try again.");
@@ -91,7 +100,7 @@ const ContactForm = () => {
 
   return (
     <div className="gap-4 mb-12 bg-white shadow-lg rounded-xl w-full h-fit lg:w-[40%] md:w-1/2 p-4 lg:p-8 flex flex-col ">
-      <p className="text-2xl">Got questions? We've got answers.</p>
+      <p className="lg:text-2xl text-lg">Got questions? We've got answers.</p>
       <form onSubmit={handleSubmit} ref={formRef} className="flex flex-col gap-6">
         <input
           name="fname"
@@ -203,7 +212,16 @@ const ContactForm = () => {
           <option value="Bangalore">Bangalore</option>
         </select>
 
-        <button type="submit" className="p-4 text-white bg-black rounded-lg">Submit</button>
+        <textarea
+                  name="message"
+                  value={form.message}
+                  onChange={handleChange}
+                  className="p-4 rounded-md border-[1px] border-gray-400 text-gray-700 placeholder:text-gray-700 appearance-none focus:outline-none focus:border-black"
+                  placeholder="Message (optional)"
+                  rows="4" cols="50"
+        />
+
+        <button type="submit" className="p-4 text-white bg-black rounded-lg flex justify-center items-center">{loading ? <Loader/> : "Submit"}</button>
       </form>
     </div>
   );
