@@ -15,7 +15,7 @@ const Gallery = () => {
   return (
     <div className="flex flex-col items-center gap-12 lg:gap-24 px-6 md:px-20 lg:px-40  mb-12 ">
       <p className="lg:w-2/3 leading-3">
-        <span className="text-lg lg:text-3xl font-semibold lg:font-bold">Welcome to Your Office Space</span>
+        <span className="text-lg lg:text-3xl font-semibold lg:font-bold">Welcome to Office Oasis</span>
         <br />
         <span className="italic text-xs lg:text-base ">
           Your Trusted Partner for finding best Co-Working and Managed Space
@@ -27,7 +27,7 @@ const Gallery = () => {
       <div className="grid grid-flow-row lg:grid-cols-2 h-full items-center justify-center flex-wrap gap-6">
         
         <p className="lg:text-2xl text-sm text-start ">       
-          At <span className="lg:text-5xl text-lg font-bold">Your Office Rental</span>  we specialize in providing innovative consulting
+          At <span className="lg:text-5xl text-lg font-bold"> Office Oasis</span>, we specialize in providing innovative consulting
           services for co-working and managed office spaces. Whether you’re a
           budding entrepreneur, an established enterprise, or a property owner
           looking to optimize your space, we help you to find best solutions to
@@ -38,6 +38,8 @@ const Gallery = () => {
           <img src={item} className="w-full h-full object-cover" />
         ))}
       </div>
+
+      <p>Finding the ideal office space for your business—expertly tailored solutions to fit your needs and budget.</p>
     </div>
   );
 };
