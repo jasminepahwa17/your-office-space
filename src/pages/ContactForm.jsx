@@ -208,13 +208,13 @@ const ContactForm = () => {
             </option>
             <option value="Delhi">Delhi</option>
             <option value="Noida">Noida</option>
-            <option value="Delhi NCR">Greater Noida </option>
+            <option value="Greater Noida">Greater Noida </option>
             <option value="Ghaziabad">Ghaziabad</option>
             <option value="Gurgaon">Gurgaon</option>
             <option value="Faridabad">Faridabad </option>
             <option value="Mumbai">Mumbai</option>
-            <option value="Bangalore">Pune</option>
-            <option value="Bangalore">Hyderabad</option>
+            <option value="Pune">Pune</option>
+            <option value="Hyderabad">Hyderabad</option>
             <option value="Bangalore">Bangalore</option>
           </select>
 
